@@ -1,0 +1,92 @@
+{
+  "name": "craft-jmi",
+  "version": "1.0.0",
+  "description": "Craft Project for Jmi",
+  "productName": "NestJS Quasar Starter",
+  "cordovaId": "in.castlecraft.nestjsquasar.starter",
+  "author": "deepak-mnt",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write \"**/*.ts\"",
+    "build": "quasar build",
+    "lint:server": "./node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'",
+    "lint:client": "eslint --ext .js,.vue src",
+    "start:server": "nodemon",
+    "start:client": "quasar dev",
+    "start:dev": "concurrently --kill-others-on-fail \"yarn start:server\" \"yarn start:client\"",
+    "test:client": "echo \"No test specified\" && exit 0",
+    "prestart:prod": "rm -rf dist && tsc",
+    "start:prod": "node dist/main.js",
+    "start:hmr": "node dist/server",
+    "test:server": "jest",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+    "@nestjs/common": "^5.1.0",
+    "@nestjs/core": "^5.1.0",
+    "axios": "^0.18.0",
+    "fastify-formbody": "^2.0.0",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "^6.0.0",
+    "typescript": "^2.9.2",
+    "vue-i18n": "^7.3.3"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^5.0.0",
+    "@types/express": "^4.0.39",
+    "@types/jest": "^21.1.8",
+    "@types/node": "^9.3.0",
+    "@types/supertest": "^2.0.4",
+    "babel-eslint": "^8.2.1",
+    "concurrently": "^3.6.0",
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.3.0",
+    "jest": "^21.2.1",
+    "nodemon": "^1.14.1",
+    "quasar-cli": "^0.16.0",
+    "prettier": "^1.11.1",
+    "supertest": "^3.0.0",
+    "ts-jest": "^21.2.4",
+    "ts-loader": "^4.1.0",
+    "ts-node": "^4.1.0",
+    "tsconfig-paths": "^3.1.1",
+    "tslint": "5.3.2",
+    "webpack": "^4.2.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage"
+  },
+  "repository": "https://github.com/deepak-mnt/jmi",
+  "license": "GNU"
+}
